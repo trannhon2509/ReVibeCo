@@ -13,7 +13,8 @@ const AppProvider = ({ children }) => {
       image: 'assets/product-1.png',
       subProducts: [
         { id: 101, name: 'Mini Candle', price: 20.00, image: '/assets/product-1.png' },
-        { id: 102, name: 'Gift Candle', price: 50.00, image: 'assets/subproduct-2.png' }
+        { id: 102, name: 'Gift Candle', price: 50.00, image: '/assets/subproduct-2.png' },
+        { id: 103, name: 'test', price: 50.00, image: '/assets/subproduct-2.png' }
       ]
     },
     {
