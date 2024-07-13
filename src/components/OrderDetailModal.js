@@ -2,6 +2,10 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap'; // Ensure you have react-bootstrap installed
 
 const OrderDetailModal = ({ order, showModal, closeModal }) => {
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+  };
+
   return (
     <Modal show={showModal} onHide={closeModal} size="lg">
       <Modal.Header closeButton>
@@ -10,7 +14,7 @@ const OrderDetailModal = ({ order, showModal, closeModal }) => {
       <Modal.Body>
         <p><strong>Order Time:</strong> {new Date(order.orderTime).toLocaleString()}</p>
         <p><strong>Full Name:</strong> {order.fullName}</p>
-        <p><strong>Total:</strong> ${order.total.toFixed(2)}</p>
+        <p><strong>Total:</strong> {formatCurrency(order.total)}</p>
         <p><strong>Products:</strong></p>
         <div className="row">
           {order.products.map((product, idx) => (
@@ -20,7 +24,7 @@ const OrderDetailModal = ({ order, showModal, closeModal }) => {
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">
-                    Price: ${product.price} <br />
+                    Price: {formatCurrency(product.price)} <br />
                     Quantity: {product.quantity}
                   </p>
                 </div>

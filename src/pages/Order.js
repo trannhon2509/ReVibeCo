@@ -19,6 +19,10 @@ function Order() {
     setShowModal(false);
   };
 
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+  };
+
   return (
     <div className="">
       <Nav />
@@ -46,12 +50,12 @@ function Order() {
                   <td>{new Date(order.orderTime).toLocaleString()}</td>
                   <td>{order.fullName}</td>
                   <td>{order.address}</td>
-                  <td>${order.total.toFixed(2)}</td>
+                  <td>{formatCurrency(order.total)}</td>
                   <td>
                     <ul>
                       {order.products.map((product, idx) => (
                         <li key={idx}>
-                          {product.name} - ${product.price} - Quantity: {product.quantity}
+                          {product.name} - {formatCurrency(product.price)} - Quantity: {product.quantity}
                         </li>
                       ))}
                     </ul>

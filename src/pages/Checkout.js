@@ -45,6 +45,7 @@ const Checkout = () => {
 
     // Chuyển hướng hoặc thông báo thành công
     alert('Đặt hàng thành công!');
+    window.location.href = '/';
     // Đoạn này bạn có thể chuyển hướng hoặc thực hiện hành động khác sau khi đặt hàng thành công
   };
 
