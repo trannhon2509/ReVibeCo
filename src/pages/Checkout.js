@@ -26,6 +26,7 @@ const Checkout = () => {
       address: address,
       orderTime: new Date().toISOString(),
       products: cartItems.map(item => ({
+        image: item.image,
         name: item.name,
         price: item.price,
         quantity: item.quantity,
