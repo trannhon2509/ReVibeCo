@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import ProductCard from '../components/ProductCard';
 import SubProductCard from '../components/SubProductCard';
 
 const Shop = () => {

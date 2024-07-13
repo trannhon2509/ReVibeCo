@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Checkout = () => {
   // Lấy danh sách sản phẩm từ localStorage
-  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+  const [cartItems, ] = useState(JSON.parse(localStorage.getItem('cart')) || []);
 
   // Tính tổng số tiền trong giỏ hàng
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
