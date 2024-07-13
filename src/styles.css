@@ -9,6 +9,9 @@
   --max-width: 1200px;
   --header-font: "Merriweather", serif;
 }
+a{
+  text-decoration: none !important;
+}
 
 * {
   padding: 0;

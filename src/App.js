@@ -5,6 +5,7 @@ import Shop from './pages/Shop';
 import "./styles.css"
 import ShoppingCard from './pages/ShoppingCard';
 import Checkout from './pages/Checkout';
+import Order from './pages/Order';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/shop/:id" element={<Shop />} />
         <Route path="/shoppingcard" element={<ShoppingCard />} /> 
         <Route path="/checkout" element={<Checkout />} /> 
+        <Route path="/order" element={<Order />} /> 
       </Routes>
     </Router>
   );

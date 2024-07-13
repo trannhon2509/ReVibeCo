@@ -10,11 +10,11 @@ import Footer from '../components/Footer'
 function Home() {
   return (
     <div>
-         <Nav />
+      <Nav />
       <Header />
       <Deals />
-      <About/>
       <Products />
+      <About />
       <Clients />
       <Footer />
     </div>

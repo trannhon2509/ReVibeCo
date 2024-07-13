@@ -6,7 +6,7 @@ const Nav = () => {
     <nav>
       <div className="nav__header">
         <div className="nav__logo">
-          <a href="/" className="logo">furni.shop</a>
+          <a href="/" className="logo">Revibeco</a>
         </div>
         <div className="nav__menu__btn" id="menu-btn">
           <i className="ri-menu-line"></i>
@@ -19,7 +19,8 @@ const Nav = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="nav__search" id="nav-search">
-      <Link to="/shoppingcard" className="btn btn-light"><i className="bi bi-bag-heart" style={{ fontSize: "23px" }}></i></Link>
+        <Link to="/order" className="btn btn-light"><i className="bi bi-receipt" style={{ fontSize: "23px" }}></i></Link>
+        <Link to="/shoppingcard" className="btn btn-light"><i className="bi bi-bag-heart" style={{ fontSize: "23px" }}></i></Link>
       </div>
     </nav>
   );

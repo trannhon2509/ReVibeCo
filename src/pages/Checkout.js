@@ -2,11 +2,51 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Checkout = () => {
-  // Lấy danh sách sản phẩm từ localStorage
-  const [cartItems, ] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+  const [cartItems] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+  const [fullName, setFullName] = useState('');
+  const [address, setAddress] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  // Tính tổng số tiền trong giỏ hàng
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  const handlePlaceOrder = () => {
+    // Kiểm tra thông tin người dùng đã nhập
+    if (!fullName.trim()) {
+      setError('Vui lòng nhập tên của bạn');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    // Tạo đơn hàng
+    const order = {
+      fullName: fullName,
+      address: address,
+      orderTime: new Date().toISOString(),
+      products: cartItems.map(item => ({
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+      total: totalPrice,
+    };
+
+    // Lưu đơn hàng xuống localStorage
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+
+    // Xóa giỏ hàng sau khi đặt hàng thành công
+    localStorage.removeItem('cart');
+
+    setLoading(false);
+
+    // Chuyển hướng hoặc thông báo thành công
+    alert('Đặt hàng thành công!');
+    // Đoạn này bạn có thể chuyển hướng hoặc thực hiện hành động khác sau khi đặt hàng thành công
+  };
 
   return (
     <div className="container">
@@ -43,8 +83,35 @@ const Checkout = () => {
         </table>
         <h4>Total: ${totalPrice}</h4>
         
+        {/* Form nhập thông tin người dùng */}
+        <div className="form-group">
+          <label htmlFor="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            className="form-control"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          {error && <p className="text-danger">{error}</p>}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            className="form-control"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+        </div>
+        
+        {/* Nút Place Order */}
+        <button className="btn btn-success" onClick={handlePlaceOrder} disabled={loading}>
+          {loading ? 'Placing Order...' : 'Place Order'}
+        </button>
       </div>
-      {/* Thêm phần thông tin người dùng, hình thức thanh toán và nút Place Order tại đây */}
     </div>
   );
 };

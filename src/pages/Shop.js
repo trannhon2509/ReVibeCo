@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import SubProductCard from '../components/SubProductCard';
+import Nav from '../components/Nav';
 
 const Shop = () => {
   const { id } = useParams();
@@ -14,6 +15,12 @@ const Shop = () => {
 
   return (
     <div className="section__container product__container">
+      <Nav/>
+      <div className="mb-3">
+        <Link to="/" className="btn btn-primary">
+          Back to Home
+        </Link>
+      </div>
       <h2>{selectedProduct.name}</h2>
       <div className="product__grid">
         {selectedProduct.subProducts.length > 0 ? (
