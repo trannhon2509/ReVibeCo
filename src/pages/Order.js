@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 import OrderDetailModal from '../components/OrderDetailModal'; // Assume you create this component
 
 function Order() {
-  const [orders, setOrders] = useState(JSON.parse(localStorage.getItem('orders')) || []);
+  const [orders, ] = useState(JSON.parse(localStorage.getItem('orders')) || []);
   const [showModal, setShowModal] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
