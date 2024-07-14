@@ -19,7 +19,7 @@ const SalesChart = () => {
       // Extract data from products to prepare for the chart
       const productNames = products.map(product => product.name);
       const productSales = products.map(product => product.sold);
-      const productViews = products.map(product => product.views); // New data: views
+    //   const productViews = products.map(product => product.views); // New data: views
 
       chartInstance.current = new Chart(ctx, {
         type: 'bar',
