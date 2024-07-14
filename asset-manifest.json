@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/revibeco/static/css/main.214ef749.css",
+    "main.js": "/revibeco/static/js/main.9df3ef98.js",
+    "static/js/453.cf702b29.chunk.js": "/revibeco/static/js/453.cf702b29.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/revibeco/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/revibeco/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/revibeco/index.html",
+    "main.214ef749.css.map": "/revibeco/static/css/main.214ef749.css.map",
+    "main.9df3ef98.js.map": "/revibeco/static/js/main.9df3ef98.js.map",
+    "453.cf702b29.chunk.js.map": "/revibeco/static/js/453.cf702b29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.214ef749.css",
+    "static/js/main.9df3ef98.js"
+  ]
+}
