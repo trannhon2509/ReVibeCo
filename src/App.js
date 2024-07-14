@@ -6,7 +6,7 @@ import "./styles.css"
 import ShoppingCard from './pages/ShoppingCard';
 import Checkout from './pages/Checkout';
 import Order from './pages/Order';
-
+import DashBoard from './pages/Dashboard';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
         <Route path="/shoppingcard" element={<ShoppingCard />} /> 
         <Route path="/checkout" element={<Checkout />} /> 
         <Route path="/order" element={<Order />} /> 
+        <Route path="/dashboard" element={<DashBoard/>} /> 
       </Routes>
     </Router>
   );

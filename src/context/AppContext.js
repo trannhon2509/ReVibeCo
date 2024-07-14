@@ -14,12 +14,12 @@ const AppProvider = ({ children }) => {
       viewed: 150,
       sold: 4,
       subProducts: [
-        { id: 101, name: 'Scented Candle 1', price: 50000, image: 'https://i.pinimg.com/originals/52/76/91/527691adb799eaadeaeeb59d87661130.jpg', viewed: 50, sold: 10  },
-        { id: 102, name: 'Scented Candle 2', price: 50000, image: 'https://i.pinimg.com/originals/61/04/d6/6104d6085eb17e6f7da136ce90d0fd5f.jpg', viewed: 50, sold: 10 },
-        { id: 103, name: 'Scented Candle 3', price: 50000, image: 'https://i.pinimg.com/originals/76/c7/df/76c7df861e48fd200ae9bb3e718a3aa2.jpg', viewed: 50, sold: 10 },
-        { id: 104, name: 'Combo Scented Candle 1', price: 50000, image: 'https://i.pinimg.com/originals/cb/12/1d/cb121d61965484b91bac0c59291049a9.jpg' , viewed: 50, sold: 10 },
-        { id: 105, name: 'Combo Scented Candle 2', price: 50000, image: 'https://i.pinimg.com/originals/c2/99/ec/c299ec0e08fa2eecf520ea26e532d09a.jpg', viewed: 50, sold: 10 },
-        { id: 106, name: 'Combo Scented Candle 3', price: 50000, image: 'https://i.pinimg.com/originals/ca/57/b2/ca57b236a752d3a0025d8dde7321a1b9.jpg', viewed: 50, sold: 10 }
+        { id: 101, name: 'Scented Candle 1', price: 50000, image: 'https://i.pinimg.com/originals/52/76/91/527691adb799eaadeaeeb59d87661130.jpg', viewed: 12, sold: 1  },
+        { id: 102, name: 'Scented Candle 2', price: 50000, image: 'https://i.pinimg.com/originals/61/04/d6/6104d6085eb17e6f7da136ce90d0fd5f.jpg', viewed: 1, sold: 1 },
+        { id: 103, name: 'Scented Candle 3', price: 50000, image: 'https://i.pinimg.com/originals/76/c7/df/76c7df861e48fd200ae9bb3e718a3aa2.jpg', viewed: 19, sold: 0 },
+        { id: 104, name: 'Combo Scented Candle 1', price: 50000, image: 'https://i.pinimg.com/originals/cb/12/1d/cb121d61965484b91bac0c59291049a9.jpg' , viewed: 10, sold: 1 },
+        { id: 105, name: 'Combo Scented Candle 2', price: 50000, image: 'https://i.pinimg.com/originals/c2/99/ec/c299ec0e08fa2eecf520ea26e532d09a.jpg', viewed: 50, sold: 1 },
+        { id: 106, name: 'Combo Scented Candle 3', price: 50000, image: 'https://i.pinimg.com/originals/ca/57/b2/ca57b236a752d3a0025d8dde7321a1b9.jpg', viewed: 50, sold: 0 }
       ]
     },
     {
@@ -30,32 +30,32 @@ const AppProvider = ({ children }) => {
       sold: 2,
       image: 'assets/product-2.png',
       subProducts: [
-        { id: 201, name: 'Wax Melt 1', price: 30000, image: 'https://i.pinimg.com/originals/4a/a9/7f/4aa97f47b7ad9af64aaefae0e565d32e.jpg' , viewed: 50, sold: 10 },
-        { id: 202, name: 'Wax Melt 2', price: 30000, image: 'https://i.pinimg.com/originals/60/7f/6f/607f6fc307a0742d2c8da0591e0801d6.jpg', viewed: 50, sold: 10 },
-        { id: 203, name: 'Wax Melt 3', price: 30000, image: 'https://i.pinimg.com/originals/a7/c2/65/a7c2658a3f18b52288bd1c8ebad4cbbf.jpg', viewed: 50, sold: 10 },
-        { id: 204, name: 'Wax Melt 4', price: 30000, image: 'https://i.pinimg.com/originals/23/6f/2c/236f2c2e9f593e91364e3bd9c9ba81ae.jpg', viewed: 50, sold: 10 },
-        { id: 205, name: 'Wax Melt 5', price: 30000, image: 'https://i.pinimg.com/originals/00/ea/fa/00eafa4c013a9d8dfe8690c3c82264c5.jpg', viewed: 50, sold: 10 }
+        { id: 201, name: 'Wax Melt 1', price: 30000, image: 'https://i.pinimg.com/originals/4a/a9/7f/4aa97f47b7ad9af64aaefae0e565d32e.jpg' , viewed: 20, sold: 1 },
+        { id: 202, name: 'Wax Melt 2', price: 30000, image: 'https://i.pinimg.com/originals/60/7f/6f/607f6fc307a0742d2c8da0591e0801d6.jpg', viewed: 10, sold: 1 },
+        { id: 203, name: 'Wax Melt 3', price: 30000, image: 'https://i.pinimg.com/originals/a7/c2/65/a7c2658a3f18b52288bd1c8ebad4cbbf.jpg', viewed: 8, sold: 0 },
+        { id: 204, name: 'Wax Melt 4', price: 30000, image: 'https://i.pinimg.com/originals/23/6f/2c/236f2c2e9f593e91364e3bd9c9ba81ae.jpg', viewed: 9, sold: 0 },
+        { id: 205, name: 'Wax Melt 5', price: 30000, image: 'https://i.pinimg.com/originals/00/ea/fa/00eafa4c013a9d8dfe8690c3c82264c5.jpg', viewed: 5, sold: 0 }
       ]
     },
     {
       id: 3,
       name: 'Scrunchies',
-      price: 20.000,
+      price: 20000,
       viewed: 150,
       sold: 3,
       image: 'assets/product-3.png',
       subProducts: [
-        {id: 301, name: 'Scrunchies 1', price: 20000, image: 'https://i.pinimg.com/originals/08/5e/34/085e34730bf1896e45e2d51f84559bdb.jpg', viewed: 50, sold: 10 },
-        {id: 302, name: 'Scrunchies 2', price: 20000, image: 'https://i.pinimg.com/originals/b6/7b/81/b67b815b5cc6c69c5df71c132fe2b512.jpg', viewed: 50, sold: 10 },
-        {id: 303, name: 'Scrunchies 3', price: 20000, image: 'https://i.pinimg.com/originals/c7/5a/5e/c75a5e43211647472ce494d7cabd5cc6.jpg', viewed: 50, sold: 10 },
-        {id: 304, name: 'Scrunchies 4', price: 20000, image: 'https://i.pinimg.com/originals/bf/ef/48/bfef4870472b63e45df97aeed8a4e3fd.jpg', viewed: 50, sold: 10 }
+        {id: 301, name: 'Scrunchies 1', price: 20000, image: 'https://i.pinimg.com/originals/08/5e/34/085e34730bf1896e45e2d51f84559bdb.jpg', viewed: 11, sold: 0 },
+        {id: 302, name: 'Scrunchies 2', price: 20000, image: 'https://i.pinimg.com/originals/b6/7b/81/b67b815b5cc6c69c5df71c132fe2b512.jpg', viewed: 21, sold: 1 },
+        {id: 303, name: 'Scrunchies 3', price: 20000, image: 'https://i.pinimg.com/originals/c7/5a/5e/c75a5e43211647472ce494d7cabd5cc6.jpg', viewed: 3, sold: 1 },
+        {id: 304, name: 'Scrunchies 4', price: 20000, image: 'https://i.pinimg.com/originals/bf/ef/48/bfef4870472b63e45df97aeed8a4e3fd.jpg', viewed: 9, sold: 1 }
        
       ]
     },
     {
       id: 4,
       name: 'Hairclip',
-      price: 35.000,
+      price: 35000,
       viewed: 150,
       sold: 2,
       image: 'assets/product-4.png',
