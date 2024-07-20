@@ -15,7 +15,7 @@ function Home() {
       <Deals />
       <Products />
       <About />
-      <Clients />
+      {/* <Clients /> */}
       <Footer />
     </div>
   )
