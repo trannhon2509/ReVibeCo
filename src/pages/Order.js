@@ -23,6 +23,11 @@ function Order() {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
   };
 
+  // Function to calculate the total amount of all orders
+  const calculateTotal = () => {
+    return orders.reduce((total, order) => total + order.total, 0);
+  };
+
   return (
     <div className="">
       <Nav />
@@ -69,6 +74,11 @@ function Order() {
               ))}
             </tbody>
           </table>
+
+          {/* Display total amount of all orders */}
+          <div className="mt-4">
+            <h4 className="text-right">Total of All Orders: {formatCurrency(calculateTotal())}</h4>
+          </div>
         </div>
       </div>
 
